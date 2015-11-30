@@ -1,0 +1,166 @@
+html {
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Petit Formal Script', serif;
+	color:rgb(44,110,178);
+}
+
+p {
+	color:#777;
+}
+
+body {
+	padding:0;
+	margin:0;
+	font-family: avenir next, sans-serif;
+
+header {
+	
+	background-image:url(../img/bg.jpg);
+	background-size:cover;
+
+	#nav {
+		background-color: rgba(44,110,178,.6);
+		#logo {
+			width:20%;
+			height:auto;
+			margin:1em;
+			margin-left:4.5em;
+			@media (min-width:768px) {
+				margin-left:10em;
+			}
+		}
+	}
+
+	h1 {
+		padding:0;
+		margin:0;
+		margin:0 auto;
+	}
+
+	hr {
+		style:none;
+		margin:1em;
+	}
+
+	nav {
+
+		background-color:rgba(12,185,232,.1);
+		padding:3em;
+
+		ul {
+			
+
+			li {
+				
+				display:inline-block;	
+				margin-top:5em;
+
+				a {
+
+					background-color: rgba(255, 255, 255, 0.5);
+					padding:1.7em;
+					color:#333;
+					text-align: center;
+					text-decoration: none;
+
+					&:hover {
+						background-color: #fff;
+					}
+
+				}
+			}
+
+		}
+
+	}
+
+}
+
+main {
+
+	.paragraph {
+		margin:2.5em;
+
+			h1 {
+				font-size:27px;
+			}
+	
+			p {
+				margin-bottom:2em;
+			}
+
+			a {
+			text-decoration: none;
+			background-color:rgb(44,110,178);
+			color:#eee;
+			padding:1em;
+		}
+	}
+
+	#service {
+		@media(min-width:768px) {
+			width:50%;
+			float:left;
+			margin:0;
+		}
+	}
+
+	.paragraph-image {
+			img {
+				width:100%;
+			@media(min-width:768px) {
+				width:50%;
+				float:left;
+			}
+		}
+
+	}
+
+	#food-img {
+
+		img {
+			width:100%;
+		 	float:left;
+		 	@media (min-width:768px) {
+				width:25%;
+				height:160px;
+			}
+		}
+
+		
+	}
+
+}
+
+footer {
+
+	background-color:rgb(44,110,178);
+	padding:1em;
+	
+	p {
+		color:#eee;
+		margin:1em;
+	}
+
+}
+
+}
+
