@@ -1,8 +1,51 @@
-html {
-	margin:0;
-	padding:0;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 	overflow-x: hidden;
-    overflow-y: scroll;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 .clearfix:before,
@@ -20,6 +63,7 @@ h5,
 h6 {
 	font-family: 'Petit Formal Script', serif;
 	color:rgb(44,110,178);
+	overflow-y: hidden;
 }
 
 p {
@@ -32,20 +76,16 @@ body {
 	font-family: avenir next, sans-serif;
 
 header {
-	
 	background-image:url(../img/bg.jpg);
 	background-size:cover;
-
 	#nav {
 		background-color: rgba(44,110,178,.6);
+		height:480px;
+		text-align:center;
 		#logo {
-			width:20%;
-			height:auto;
-			margin:1em;
-			margin-left:4.5em;
-			@media (min-width:768px) {
-				margin-left:10em;
-			}
+			position:relative;
+			top:50%;
+			transform: translateY(-50%);
 		}
 	}
 
@@ -74,7 +114,6 @@ header {
 				margin-top:5em;
 
 				a {
-
 					background-color: rgba(255, 255, 255, 0.5);
 					padding:1.7em;
 					color:#333;
@@ -94,47 +133,59 @@ header {
 
 }
 
-main {
+.main {
 
 	.paragraph {
-		margin:2.5em;
+		padding: 2.7em;
 
-			h1 {
-				font-size:27px;
-			}
-	
-			p {
-				margin-bottom:2em;
-			}
+		h1 {
+			font-size:25px;
+			margin-bottom:15px;
+		}
 
-			a {
+		p {
+			line-height:25px;
+			margin:15px 0 40px 0;
+			// border:1px solid #f09;
+		}
+
+		a {
 			text-decoration: none;
 			background-color:rgb(44,110,178);
 			color:#eee;
-			padding:1em;
+			padding:15px;
+			transition: background-color 1s out-ease;
+			&:hover {
+				background-color:#eee;
+				color:rgb(44,110,178);
+				border:1px solid rgb(44,110,178);
+			}
 		}
 	}
 
-	#service {
+	.services-paragraph {
+		overflow: hidden;
+	}
+
+	#services-copy {
 		@media(min-width:768px) {
 			width:50%;
 			float:left;
-			margin:0;
+			box-sizing:border-box;
 		}
 	}
 
-	.paragraph-image {
-			img {
-				width:100%;
-			@media(min-width:768px) {
-				width:50%;
-				float:left;
-			}
+	.services-image {
+		img {
+			width:100%;
 		}
-
+		@media(min-width:768px) {
+			float:right;
+			width:50%;
+		}
 	}
 
-	#food-img {
+	.food-images {
 
 		img {
 			width:100%;
@@ -143,21 +194,62 @@ main {
 				width:25%;
 				height:160px;
 			}
+
+			a:hover {
+				background-color:#234;
+			}
+		}
+		
+	}
+
+	#contact {
+		box-sizing:border-box;
+		display:block;
+		width:100%;
+		background-color: rgba(44,110,178,.9);
+
+		h1 {
+			color:#eee;
 		}
 
+		@media (min-width:768px) {
+			h1 {
+				margin:0 5em;
+			}
+			form {
+				width:70%;
+				margin:0 8em;
+			}
+		}
 		
+		.form-group {
+			#name, #email, #message {
+				margin:1em;
+				padding:1.5em;
+				width:80%;
+			}
+		}
+
+		#send-message {
+			margin:1em;
+			border:none;
+			color:rgb(44,110,178);
+			background-color:#eee;
+			font-size:15px;
+			padding:1.2em;
+		}
 	}
 
 }
 
 footer {
-
-	background-color:rgb(44,110,178);
-	padding:1em;
+	background-color:#eee;
+	padding:1.5em;
 	
 	p {
-		color:#eee;
-		margin:1em;
+		color:rgb(44,110,178);
+		padding:10px;
+
 	}
 
 }

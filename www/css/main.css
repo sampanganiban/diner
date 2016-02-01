@@ -1,16 +1,56 @@
-html {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  overflow-x: hidden; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table;
-  clear: both;
-}
+  clear: both; }
 
 h1,
 h2,
@@ -20,108 +60,114 @@ h5,
 h6 {
   font-family: 'Petit Formal Script', serif;
   color: #2c6eb2;
-}
+  overflow-y: hidden; }
 
 p {
-  color: #777;
-}
+  color: #777; }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: avenir next, sans-serif;
-}
-body header {
-  background-image: url(../img/bg.jpg);
-  background-size: cover;
-}
-body header #nav {
-  background-color: rgba(44, 110, 178, 0.6);
-}
-body header #nav #logo {
-  width: 20%;
-  height: auto;
-  margin: 1em;
-  margin-left: 4.5em;
-}
-@media (min-width: 768px) {
-  body header #nav #logo {
-    margin-left: 10em;
-  }
-}
-body header h1 {
-  padding: 0;
-  margin: 0;
-  margin: 0 auto;
-}
-body header hr {
-  style: none;
-  margin: 1em;
-}
-body header nav {
-  background-color: rgba(12, 185, 232, 0.1);
-  padding: 3em;
-}
-body header nav ul li {
-  display: inline-block;
-  margin-top: 5em;
-}
-body header nav ul li a {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 1.7em;
-  color: #333;
-  text-align: center;
-  text-decoration: none;
-}
-body header nav ul li a:hover {
-  background-color: #fff;
-}
-body main .paragraph {
-  margin: 2.5em;
-}
-body main .paragraph h1 {
-  font-size: 27px;
-}
-body main .paragraph p {
-  margin-bottom: 2em;
-}
-body main .paragraph a {
-  text-decoration: none;
-  background-color: #2c6eb2;
-  color: #eee;
-  padding: 1em;
-}
-@media (min-width: 768px) {
-  body main #service {
-    width: 50%;
-    float: left;
-    margin: 0;
-  }
-}
-body main .paragraph-image img {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  body main .paragraph-image img {
-    width: 50%;
-    float: left;
-  }
-}
-body main #food-img img {
-  width: 100%;
-  float: left;
-}
-@media (min-width: 768px) {
-  body main #food-img img {
-    width: 25%;
-    height: 160px;
-  }
-}
-body footer {
-  background-color: #2c6eb2;
-  padding: 1em;
-}
-body footer p {
-  color: #eee;
-  margin: 1em;
-}
+  font-family: avenir next, sans-serif; }
+  body header {
+    background-image: url(../img/bg.jpg);
+    background-size: cover; }
+    body header #nav {
+      background-color: rgba(44, 110, 178, 0.6);
+      height: 480px;
+      text-align: center; }
+      body header #nav #logo {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+    body header h1 {
+      padding: 0;
+      margin: 0;
+      margin: 0 auto; }
+    body header hr {
+      style: none;
+      margin: 1em; }
+    body header nav {
+      background-color: rgba(12, 185, 232, 0.1);
+      padding: 3em; }
+      body header nav ul li {
+        display: inline-block;
+        margin-top: 5em; }
+        body header nav ul li a {
+          background-color: rgba(255, 255, 255, 0.5);
+          padding: 1.7em;
+          color: #333;
+          text-align: center;
+          text-decoration: none; }
+          body header nav ul li a:hover {
+            background-color: #fff; }
+  body .main .paragraph {
+    padding: 2.7em; }
+    body .main .paragraph h1 {
+      font-size: 25px;
+      margin-bottom: 15px; }
+    body .main .paragraph p {
+      line-height: 25px;
+      margin: 15px 0 40px 0; }
+    body .main .paragraph a {
+      text-decoration: none;
+      background-color: #2c6eb2;
+      color: #eee;
+      padding: 15px;
+      transition: background-color 1s out-ease; }
+      body .main .paragraph a:hover {
+        background-color: #eee;
+        color: #2c6eb2;
+        border: 1px solid #2c6eb2; }
+  body .main .services-paragraph {
+    overflow: hidden; }
+  @media (min-width: 768px) {
+    body .main #services-copy {
+      width: 50%;
+      float: left;
+      box-sizing: border-box; } }
+  body .main .services-image img {
+    width: 100%; }
+  @media (min-width: 768px) {
+    body .main .services-image {
+      float: right;
+      width: 50%; } }
+  body .main .food-images img {
+    width: 100%;
+    float: left; }
+    @media (min-width: 768px) {
+      body .main .food-images img {
+        width: 25%;
+        height: 160px; } }
+    body .main .food-images img a:hover {
+      background-color: #234; }
+  body .main #contact {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    background-color: rgba(44, 110, 178, 0.9); }
+    body .main #contact h1 {
+      color: #eee; }
+    @media (min-width: 768px) {
+      body .main #contact h1 {
+        margin: 0 5em; }
+      body .main #contact form {
+        width: 70%;
+        margin: 0 8em; } }
+    body .main #contact .form-group #name, body .main #contact .form-group #email, body .main #contact .form-group #message {
+      margin: 1em;
+      padding: 1.5em;
+      width: 80%; }
+    body .main #contact #send-message {
+      margin: 1em;
+      border: none;
+      color: #2c6eb2;
+      background-color: #eee;
+      font-size: 15px;
+      padding: 1.2em; }
+  body footer {
+    background-color: #eee;
+    padding: 1.5em; }
+    body footer p {
+      color: #2c6eb2;
+      padding: 10px; }
